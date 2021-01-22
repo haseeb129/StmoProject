@@ -35,7 +35,9 @@ class App extends Component {
                 />
                 <Route exact path="/PointChecker" component={PointChecker} />
               </Switch>
+              <br />
             </div>
+
             {/* 
             <Row
               style={{

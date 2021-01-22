@@ -6,8 +6,10 @@ import TopHeading from "../TopHeading";
 import { Alert, Button, Form } from "react-bootstrap/";
 export default class SignUp extends Component {
   state = {
-    referralCode: "e01f8968-5ad7-4b4b-ada3-2761359dd2c2",
-    email: "test-account-with-referral@gmail.com",
+    // referralCode: "e01f8968-5ad7-4b4b-ada3-2761359dd2c2",
+    // email: "test-account-with-referral@gmail.com",
+    referralCode: "",
+    email: "",
     alertProperty: null,
   };
 

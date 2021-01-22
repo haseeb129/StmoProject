@@ -71,7 +71,8 @@ class ListOfPrizes extends Component {
                       style={{
                         fontSize: "25px",
                         fontWeight: "bold",
-                        paddingLeft: "20px",
+                        paddingLeft: "5px",
+                        paddingTop: "10px",
                       }}
                     >
                       {e.title}
