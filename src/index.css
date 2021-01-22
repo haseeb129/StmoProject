@@ -1,13 +1,169 @@
+@font-face {
+  font-family: "Helomade-Regular";
+  src: local("Helomade-Regular"),
+    url("./fonts/Helomade-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: "Helomade-Regular";
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.color-nav {
+  /* background-color: #9fa8a3; */
+  /* border-left-style: solid; */
+  box-shadow: 0px 2px 1px rgba(34, 35, 58, 0.1);
+  color: black;
+}
+
+.subscribeButton {
+  border-style: outset;
+}
+.pageStartHeading {
+  padding: 1%;
+  text-align: center;
+  color: aliceblue;
+  font-size: large;
+  margin: 0%;
+}
+h4 {
+  font-family: Helomade-Regular;
+  text-decoration: underline;
+}
+.appClass {
+  font-family: Helomade-Regular;
+}
+.tabelHeader {
+  background-color: #173e43;
+  color: white;
+  font-weight: bold;
+}
+
+.homePageOverflow {
+  height: 50vh;
+  overflow: auto;
+  /* text-align: center; */
+}
+
+.brandSize {
+  font-size: 33px;
+  font-weight: bolder;
+  padding: 0%;
+  margin: 0%;
+}
+
+.downShadow {
+  /* box-shadow: 0px 1px 2px rgba(34, 35, 58, 0.2); */
+  box-shadow: 0px 2px 1px rgba(34, 35, 58, 0.1);
+}
+
+.borderButtom {
+  /* color: red; */
+  box-shadow: 10px 10px 1px rgba(34, 35, 58, 0.1);
+  border-bottom: black;
+  border-width: 10px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.tabelBody {
+  background-color: #e3e3e3;
+  color: black;
+}
+
+.circularShape {
+  border-radius: 50%;
+  background-image: linear-gradient(
+    45deg,
+    #ff9a9e 0%,
+    #fad0c4 99%,
+    #fad0c4 100%
+  );
+  height: 60px;
+  width: 60px;
+  border: 1px solid;
+  box-shadow: 3px 8px;
+  text-align: center;
+  /* padding-top: 10%; */
+  font-size: 35px;
+  font-weight: bold;
+  padding-bottom: 15%;
+}
+
+.divClass {
+  box-shadow: 3px 8px;
+  border: 1px solid;
+  display: inline-block;
+  margin: 0.4em;
+  padding: 1em;
+  cursor: pointer;
+  background: #e1e1e1;
+  color: #666;
+  width: 50%;
+  animation-direction: reverse;
+}
+.pulse:hover {
+  animation: pulse 0.5s ease-in infinite;
+}
+.push:hover {
+  animation: pulse 0.3s linear 1;
+  /* animation-direction: reverse; */
+}
+.pop:hover {
+  animation: pop 0.5s linear 1;
+}
+@keyframes pulse {
+  25% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+}
+@keyframes push {
+  50% {
+    transform: scale(0.8);
+  }
+}
+@keyframes pop {
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.customButton {
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  border: 1px solid;
+  font-size: 25px;
+  margin-top: 3%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  border-color: black;
+  /* border-style: outset; */
+  color: #fff;
+  box-shadow: 4px 7px #385878;
+}
+
+.customButton:hover {
+  background-color: #3e8e41;
+  box-shadow: 0px 0px #385878;
+  transform: translateY(1px);
+}
+
+.customButton:active {
+  background-color: #3e8e41;
+  /* box-shadow: 0 5px #666;
+  transform: translateY(4px); */
 }
