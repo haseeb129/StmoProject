@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
+import axios from "axios";
 class ListOfPrizes extends Component {
   state = {
     user: [
@@ -36,6 +37,24 @@ class ListOfPrizes extends Component {
     ],
   };
 
+  componentDidMount() {
+    axios
+      .get(
+        "http://stombackendapi-env.eba-pqvtsdnw.us-east-2.elasticbeanstalk.com/prizes"
+      )
+      .then((res) => {
+        try {
+          console.log("Response List Of Prices", res.data.data.body.prizes);
+          this.setState({ user: res.data.data.body.prizes });
+        } catch (err) {
+          document.getElementById("demo").innerHTML = err.message;
+        }
+      })
+      .catch((err) => {
+        console.log("Errro Leader Board", err);
+      });
+  }
+
   render() {
     return (
       <div>
@@ -50,7 +69,7 @@ class ListOfPrizes extends Component {
                   <Col md={10} sm={10} xs={10}>
                     <div
                       style={{
-                        fontSize: "30px",
+                        fontSize: "25px",
                         fontWeight: "bold",
                         paddingLeft: "20px",
                       }}

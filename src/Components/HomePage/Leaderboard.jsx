@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Table } from "react-bootstrap";
+import axios from "axios";
 class Leaderboard extends Component {
   state = {};
   compare = (a, b) => {
