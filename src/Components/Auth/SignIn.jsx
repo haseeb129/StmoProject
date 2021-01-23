@@ -14,7 +14,6 @@ export default class SignUp extends Component {
   };
 
   handleChange = (e) => {
-    // console.log("e.target.name", e.target.name);
     this.setState({ [e.target.name]: e.target.value });
   };
   handleSubmit = async (e) => {
@@ -44,9 +43,13 @@ export default class SignUp extends Component {
         header
       )
       .then(async (response) => {
-        console.log("Login response ", response);
-        // this.setState({alertProperty:{variant:"danger",message:err.response.data.data.message}})
-        // }
+        console.log("Login response ", response.data.data);
+        this.setState({
+          alertProperty: {
+            variant: "success",
+            message: `Subscribed ,Referral Code:${response.data.data.referral}`,
+          },
+        });
       })
       .catch((err) => {
         console.log("Login Error", err.response.data.data.message);
@@ -88,7 +91,6 @@ export default class SignUp extends Component {
             <Form.Control
               type="text"
               onChange={this.handleChange}
-              required
               size="lg"
               name="referralCode"
               value={this.state.referralCode}
@@ -103,7 +105,7 @@ export default class SignUp extends Component {
             variant="default"
             className="customButton"
           >
-            <span style={{ color: "white" }}>Subscribe Now</span>
+            <span style={{ color: "black" }}>Subscribe Now</span>
           </Button>
 
           <br />

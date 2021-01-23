@@ -7,27 +7,32 @@ class VerificationPage extends Component {
   render() {
     return (
       <div>
-        <Row>
-          <Col md={4} sm={12}>
-            <div style={{ textAlign: "center" }}>
-              <div style={{ textAlign: "center", marginTop: "2%" }}>
-                <p style={{ fontSize: "70px", fontWeight: "bold" }}>
-                  Referral Code
-                  <br />
-                  <span style={{ fontSize: "60px", color: "red" }}>
-                    {this.state.referralCode}
-                  </span>
-                </p>
+        <div
+          className="blueBackground "
+          style={{ padding: "20px", minHeight: "100vh" }}
+        >
+          <Row>
+            <Col md={4} sm={12}>
+              <div style={{ textAlign: "center" }}>
+                <div style={{ textAlign: "center", marginTop: "2%" }}>
+                  <p style={{ fontSize: "70px", fontWeight: "bold" }}>
+                    Referral Code
+                    <br />
+                    <span style={{ fontSize: "60px", color: "red" }}>
+                      {this.state.referralCode}
+                    </span>
+                  </p>
+                </div>
               </div>
-            </div>
-          </Col>
-          <Col md={8} sm={12}>
-            <ReactPlayer
-              width="100%"
-              url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-            />
-          </Col>
-        </Row>
+            </Col>
+            <Col md={8} sm={12}>
+              <ReactPlayer
+                width="100%"
+                url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+              />
+            </Col>
+          </Row>
+        </div>
       </div>
     );
   }

@@ -15,7 +15,7 @@ class App extends Component {
         <React.Fragment>
           <div className="mb-4 appClass">
             <Navbar />
-            <div className="container">
+            <div className="">
               <Switch>
                 {/* <Route
                   exact
@@ -35,9 +35,8 @@ class App extends Component {
                 />
                 <Route exact path="/PointChecker" component={PointChecker} />
               </Switch>
-              <br />
+              {/* <br /> */}
             </div>
-
             {/* 
             <Row
               style={{
@@ -72,9 +71,9 @@ class App extends Component {
                 </div>
               </Col>
             </Row> */}
+            {/* <br />
             <br />
-            <br />
-            <br />
+            <br /> */}
           </div>
         </React.Fragment>
       </BrowserRouter>
