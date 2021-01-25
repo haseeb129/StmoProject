@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import ReactPlayer from "react-player";
 import TopHeading from "./TopHeading";
+import auth from "./Auth/authService";
+
 class VerificationPage extends Component {
-  state = { referralCode: "2352323596232" };
+  state = { user: auth.getUser() };
   render() {
     return (
       <div>
@@ -18,8 +20,10 @@ class VerificationPage extends Component {
                   <p style={{ fontSize: "70px", fontWeight: "bold" }}>
                     Referral Code
                     <br />
-                    <span style={{ fontSize: "60px", color: "red" }}>
-                      {this.state.referralCode}
+                    <span style={{ fontSize: "50px", color: "red" }}>
+                      {this.state.user
+                        ? this.state.user.referral
+                        : "Not Available"}
                     </span>
                   </p>
                 </div>

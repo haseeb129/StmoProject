@@ -4,12 +4,10 @@ import axios from "axios";
 import auth from "./authService";
 import TopHeading from "../TopHeading";
 import { Alert, Button, Form } from "react-bootstrap/";
-export default class SignUp extends Component {
+export default class ExistingSubscriber extends Component {
   state = {
     // referralCode: "e01f8968-5ad7-4b4b-ada3-2761359dd2c2",
     // email: "test-account-with-referral@gmail.com",
-    name: "",
-    referralCode: "",
     email: "",
     alertProperty: null,
   };
@@ -22,40 +20,30 @@ export default class SignUp extends Component {
     this.setState({ alertProperty: null });
     console.log("This is state", this.state);
 
-    let sendingObject = null;
-    if (this.state.referralCode !== null && this.state.referralCode !== "")
-      sendingObject = {
-        name: this.state.name,
-        email: this.state.email,
-        referral: this.state.referralCode,
-      };
-    else
-      sendingObject = {
-        name: this.state.name,
-        email: this.state.email,
-      };
-    console.log("sendingObject", sendingObject);
     let header = {
       "Cache-Control": "no-cache",
       "Content-Type": "application/json",
     };
     await axios
-      .post(
-        "http://stombackendapi-env.eba-pqvtsdnw.us-east-2.elasticbeanstalk.com/email",
-        sendingObject,
+      .get(
+        `https://projectstomsapi.com/email?email=${this.state.email}`,
+        { email: this.state.email },
         header
       )
       .then(async (response) => {
-        alert("subscribed successfully");
+        console.log("Login response ", response.data.data.body);
+
         auth.addUser(response.data.data.body);
-        console.log("Login response ", response.data.data);
+
+        // console.log("Geting Object ", auth.getUser());
+
+        this.setState({
+          alertProperty: {
+            variant: "text-success",
+            message: `Subscribed ,Referral Code:${response.data.data.body.referral}`,
+          },
+        });
         window.location = "/";
-        // this.setState({
-        //   alertProperty: {
-        //     variant: "text-success",
-        //     message: `Subscribed ,Referral Code:${response.data.data.body.referral}`,
-        //   },
-        // });
       })
       .catch((err) => {
         console.log("Login Error", err.response.data.data.message);
@@ -72,19 +60,6 @@ export default class SignUp extends Component {
       <div>
         <Form className="inner fontSizeSignInPage" onSubmit={this.handleSubmit}>
           <Form.Group controlId="" className="fontSizeSignInPage">
-            <Form.Label>Name</Form.Label>
-            <Form.Control
-              // type="username"
-              onChange={this.handleChange}
-              required
-              className="fontSizeSignInPage"
-              name="name"
-              value={this.state.name}
-              placeholder="Enter Name"
-            />
-          </Form.Group>
-
-          <Form.Group controlId="" className="fontSizeSignInPage">
             <Form.Label>Email</Form.Label>
             <Form.Control
               // type="username"
@@ -95,19 +70,6 @@ export default class SignUp extends Component {
               className="fontSizeSignInPage"
               value={this.state.email}
               placeholder="Enter Email"
-            />
-          </Form.Group>
-
-          <Form.Group controlId="" className="fontSizeSignInPage">
-            <Form.Label>Referral Code</Form.Label>
-            <Form.Control
-              type="text"
-              onChange={this.handleChange}
-              size="lg"
-              name="referralCode"
-              className="fontSizeSignInPage"
-              value={this.state.referralCode}
-              placeholder="Referral Code"
             />
 
             {this.state.alertProperty && (
@@ -124,7 +86,7 @@ export default class SignUp extends Component {
             variant="default"
             className="customButton"
           >
-            <span style={{ color: "black" }}>Subscribe Now</span>
+            <span style={{ color: "black" }}>Check Subscription</span>
           </Button>
           <br />
           {/* 

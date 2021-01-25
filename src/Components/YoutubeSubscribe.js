@@ -79,6 +79,7 @@ export default class YoutubeSubscribe extends Component {
     return (
       <section className="youtubeSubscribe">
         <div
+          style={{ backgroundColor: "yellow" }}
           ref={this.youtubeSubscribeNode}
           className="g-ytsubscribe "
           data-theme={theme}

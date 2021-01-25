@@ -208,3 +208,14 @@ ROW {
   margin-right: -15px;
   margin-left: -15px;
 }
+
+.videoDivHeight {
+  min-height: 80vh;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 511px) {
+  .videoDivHeight {
+    min-height: 40vh;
+  }
+}

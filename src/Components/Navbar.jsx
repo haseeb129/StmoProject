@@ -4,11 +4,12 @@ import { LinkContainer } from "react-router-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import { Button, Col, Row } from "react-bootstrap/";
 import logo from "../text.gif";
+import auth from "./Auth/authService";
 export default class SampleNavbar extends Component {
-  state = {};
+  state = { user: auth.getUser() };
   handleLogout = () => {
-    // auth.logout();
-    // window.location = "/";
+    auth.removeUser();
+    window.location = "/";
   };
 
   render() {
@@ -77,6 +78,21 @@ export default class SampleNavbar extends Component {
                     <NavLink>Point</NavLink>
                   </LinkContainer>
 
+                  {!this.state.user && (
+                    <LinkContainer
+                      style={{
+                        // color: "white",
+                        color: "black",
+                        fontSize: "22px",
+                        marginLeft: "20px",
+                        marginRight: "20px",
+                      }}
+                      to="/Existing"
+                    >
+                      <NavLink>Existing Subscriber</NavLink>
+                    </LinkContainer>
+                  )}
+
                   {/* <LinkContainer
               style={{
                 color: "white",
@@ -96,18 +112,15 @@ export default class SampleNavbar extends Component {
             </LinkContainer> */}
                 </Nav>
                 {this.state.user && (
-                  <Form inline>
-                    <Form.Label
-                      style={{
-                        fontSize: "22px",
-                        color: "white",
-                        marginLeft: "10px",
-                        marginRight: "10px",
-                      }}
-                    >
-                      <h6>{this.state.user.username}</h6>
-                    </Form.Label>
-                  </Form>
+                  <Button
+                    variant="outline-dark"
+                    onClick={this.handleLogout}
+                    style={{
+                      marginRight: "1rem",
+                    }}
+                  >
+                    SignOut
+                  </Button>
                 )}
               </Navbar.Collapse>
             </Navbar>
