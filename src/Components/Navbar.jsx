@@ -78,7 +78,7 @@ export default class SampleNavbar extends Component {
                     <NavLink>Point</NavLink>
                   </LinkContainer>
 
-                  {!this.state.user && (
+                  {/* {!this.state.user && (
                     <LinkContainer
                       style={{
                         // color: "white",
@@ -91,7 +91,7 @@ export default class SampleNavbar extends Component {
                     >
                       <NavLink>Existing Subscriber</NavLink>
                     </LinkContainer>
-                  )}
+                  )} */}
 
                   {/* <LinkContainer
               style={{

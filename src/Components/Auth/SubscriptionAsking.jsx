@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./auth.css";
 import axios from "axios";
 import auth from "./authService";
-import TopHeading from "../TopHeading";
 import { Alert, Button, Form } from "react-bootstrap/";
 export default class SubscriptionAsking extends Component {
   componentDidMount() {
@@ -14,7 +13,7 @@ export default class SubscriptionAsking extends Component {
       <div>
         <div className="inner fontSizeSignInPage">
           <div className="p-4">
-            <h3>Are you a new Subscriber ??</h3>
+            <h3 style={{ fontWeight: "bold" }}>Are you a new Subscriber ??</h3>
 
             <Button
               onClick={() => this.props.onMouseClick(true)}
@@ -22,8 +21,15 @@ export default class SubscriptionAsking extends Component {
               block
               variant="default"
               className="customButton"
+              style={{
+                borderStyle: "groove",
+                borderColor: "black",
+                borderWidth: "3px",
+              }}
             >
-              <span style={{ color: "black" }}>Yes, i'm a new Subscriber </span>
+              <span style={{ color: "black", fontSize: "22px" }}>
+                Yes, i'm a new Subscriber{" "}
+              </span>
             </Button>
             <br />
             <Button
@@ -34,8 +40,13 @@ export default class SubscriptionAsking extends Component {
               block
               variant="default"
               className="customButton"
+              style={{
+                borderStyle: "groove",
+                borderColor: "black",
+                borderWidth: "3px",
+              }}
             >
-              <span style={{ color: "black" }}>
+              <span style={{ color: "black", fontSize: "22px" }}>
                 No, i'm an Existing Subscriber
               </span>
             </Button>

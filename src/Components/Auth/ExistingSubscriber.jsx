@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./auth.css";
 import axios from "axios";
 import auth from "./authService";
-import TopHeading from "../TopHeading";
 import { Alert, Button, Form } from "react-bootstrap/";
 export default class ExistingSubscriber extends Component {
   state = {
@@ -85,8 +84,15 @@ export default class ExistingSubscriber extends Component {
             block
             variant="default"
             className="customButton"
+            style={{
+              borderStyle: "groove",
+              borderColor: "black",
+              borderWidth: "3px",
+            }}
           >
-            <span style={{ color: "black" }}>Check Subscription</span>
+            <span style={{ color: "black", fontSize: "22px" }}>
+              Check Subscription
+            </span>
           </Button>
           <br />
           {/* 

@@ -107,13 +107,24 @@ class HomePage extends Component {
               )}
 
               <br />
-              <YoutubeSubscribe
-                // channelName={channelName}
-                channelid="UCJv5T2W-D3K3fYO0prgv5uw"
-                theme={"default"}
-                layout={"full"}
-                count={"default"}
-              />
+              <div
+                className="youtubeBackground"
+                style={{
+                  textAlign: "center",
+                  backgroundColor: "yellow",
+                  paddingTop: "10px",
+                  marginLeft: "20%",
+                  marginRight: "20%",
+                }}
+              >
+                <YoutubeSubscribe
+                  // channelName={channelName}
+                  channelid="UCJv5T2W-D3K3fYO0prgv5uw"
+                  // theme={"dark"}
+                  layout={"full"}
+                  count={"default"}
+                />
+              </div>
 
               <br />
               <br />
@@ -145,21 +156,22 @@ class HomePage extends Component {
             <Col md={6}>
               <div className=" " style={{ padding: "20px" }}>
                 <h2 style={{ fontWeight: "bolder" }}>Leader Board</h2>
-                <div className="homePageOverflow">
+                {/* <div className="homePageOverflow">
                   <Leaderboard />
-                </div>
-                {/* <br />
-              <br />
-              <br /> */}
+                </div> */}
+                <Leaderboard />
               </div>
             </Col>
             <Col md={6}>
               <div className=" " style={{ padding: "20px" }}>
                 <h2 style={{ fontWeight: "bolder" }}>List of Prizes</h2>
-                <div className="homePageOverflow">
+                {/* <div className="homePageOverflow">
                   <ListOfPrizes />
-                </div>
+                </div> */}
+                <ListOfPrizes />
+
                 <br />
+
                 <br />
                 <br />
               </div>

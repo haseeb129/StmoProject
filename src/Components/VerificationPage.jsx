@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import ReactPlayer from "react-player";
-import TopHeading from "./TopHeading";
 import auth from "./Auth/authService";
 
 class VerificationPage extends Component {

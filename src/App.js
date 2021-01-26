@@ -7,7 +7,7 @@ import logo4 from "./11.png";
 import HomePage from "./Components/HomePage/HomePage";
 import VerificationPage from "./Components/VerificationPage";
 import PointChecker from "./Components/PointChecker";
-import Test from "./Components/Test";
+
 import AlreadySubscribed from "./Components/Auth/AlreadySubscribed";
 import SubscriptionAsking from "./Components/Auth/SubscriptionAsking";
 import auth from "./Components/Auth/authService";

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import TopHeading from "./TopHeading";
 import auth from "./Auth/authService";
 class PointChecker extends Component {
   state = { user: auth.getUser() };
@@ -13,8 +12,14 @@ class PointChecker extends Component {
           <div style={{ textAlign: "center" }}>
             <div style={{ textAlign: "center", marginTop: "15%" }}>
               <p style={{ fontSize: "90px", fontWeight: "bold" }}>
-                Your Points
-                <span style={{ color: "red" }}>
+                Your Points:
+                <span
+                  style={{
+                    color: "red",
+                    marginLeft: "20px",
+                    textAlign: "center",
+                  }}
+                >
                   {this.state.user ? this.state.user.points : "Not Available"}
                 </span>
               </p>
