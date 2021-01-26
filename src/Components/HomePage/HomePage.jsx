@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Button, Container } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import ReactPlayer from "react-player";
 import Leaderboard from "./Leaderboard";
 import ListOfPrizes from "./ListOfPrizes";
@@ -8,7 +8,7 @@ import YoutubeSubscribe from "../YoutubeSubscribe";
 import SubscriptionAsking from "../Auth/SubscriptionAsking";
 import ExistingSubscriberOptions from "../Auth/ExistingSubscriberOptions";
 import ExistingSubscriber from "../Auth/ExistingSubscriber";
-import FadeInAnimation from "../Fade Effect/FadeInAnimation";
+// import FadeInAnimation from "../Fade Effect/FadeInAnimation";
 
 // import { AwesomeButton } from "react-awesome-button";
 // import "react-awesome-button/dist/styles.css";
@@ -20,10 +20,6 @@ class HomePage extends Component {
   setNewSubscriber = (e) => {
     this.setState({ newSubscriber: e });
   };
-
-  componentDidMount() {
-    console.log("Hoome Page", this.props);
-  }
 
   render() {
     return (

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Row, Col } from "react-bootstrap";
+// import { Row, Col } from "react-bootstrap";
 import Navbar from "./Components/Navbar";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import logo4 from "./11.png";
+// import logo4 from "./11.png";
 import HomePage from "./Components/HomePage/HomePage";
 import VerificationPage from "./Components/VerificationPage";
 import PointChecker from "./Components/PointChecker";

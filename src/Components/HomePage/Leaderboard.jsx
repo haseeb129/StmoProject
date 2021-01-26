@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Table, Row, Col } from "react-bootstrap";
+// import { Table, Row, Col } from "react-bootstrap";
 import axios from "axios";
 class Leaderboard extends Component {
   state = {};
@@ -12,91 +12,75 @@ class Leaderboard extends Component {
     }
     return 0;
   };
+
   componentDidMount() {
-    let array = [
-      {
-        position: "7",
-        name: "Handwritten Thank You letter from Steven",
-        points: 5,
-      },
-      {
-        position: "7",
-        name: "Handwritten Thank You letter from Steven",
-        points: 5,
-      },
-      {
-        position: "7",
-        name: "Handwritten Thank You letter from Steven",
-        points: 5,
-      },
-      {
-        position: "7",
-        name: "Handwritten Thank You letter from Steven",
-        points: 5,
-      },
-      {
-        position: "7",
-        name: "Handwritten Thank You letter from Steven",
-        points: 5,
-      },
-      {
-        position: "1",
-        name: "Handwritten Thank You letter from Steven",
-        points: 100,
-      },
-      {
-        position: "2",
-        name: "Handwritten Thank You letter from Steven",
-        points: 90,
-      },
-      {
-        position: "5",
-        name: "Handwritten Thank You letter from Steven",
-        points: 30,
-      },
-    ];
-
-    array = array.sort(this.compare);
-
-    this.setState({ user: array });
-
     axios
-      .post(
-        "http://stombackendapi-env.eba-pqvtsdnw.us-east-2.elasticbeanstalk.com/email",
-        {
-          email: "test-account-with-referral@gmail.com",
-          referral: "e01f8968-5ad7-4b4b-ada3-2761359dd2c2",
-        }
-      )
+      .get("http://projectstomsapi.com/leader-board")
       .then((res) => {
-        console.log("RES Leaderboard", res.data);
+        try {
+          console.log(
+            "Response List Of Leaderboard",
+            res.data.data.body.leaderBoard
+          );
+          this.setState({ leaderboardList: res.data.data.body.leaderBoard });
+        } catch (err) {
+          document.getElementById("demo").innerHTML = err.message;
+        }
       })
       .catch((err) => {
-        console.log("Error Leaderboard", err.response);
+        console.log("Errro Leader Board", err);
       });
   }
 
   render() {
     return (
       <div>
-        {this.state.user && (
-          <div className="homePageOverflow">
-            {this.state.user.map((e, idx) => {
+        {!this.state.leaderboardList && (
+          <h3 style={{ fontWeight: "bolder" }}>Loading....</h3>
+        )}
+        {this.state.leaderboardList && (
+          <div className="">
+            {this.state.leaderboardList.map((e, idx) => {
               return (
                 <div key={idx} className="squareShape ml-4 mr-4 mb-4 mt-0">
-                  <span style={{ color: "#dd1f58", marginRight: "5%" }}>
-                    Position : {e.position}
+                  Emial:
+                  <span
+                    style={{
+                      color: "#dd1f58",
+                      marginRight: "5%",
+                      paddingLeft: "10px",
+                    }}
+                  >
+                    {e.email}
                   </span>
-                  Points: {e.points}
+                  Points:
+                  <span
+                    style={{
+                      color: "#dd1f58",
+                      marginRight: "5%",
+                      paddingLeft: "10px",
+                    }}
+                  >
+                    {e.points}
+                  </span>
                   <div
                     style={{
                       paddingLeft: "2%",
-                      fontSize: "20px",
+                      fontSize: "18px",
                       marginTop: "5px",
                       marginBottom: "2%",
                     }}
                   >
-                    Name: {e.name}
+                    Referral Code:
+                    <span
+                      style={{
+                        color: "#dd1f58",
+                        marginRight: "5%",
+                        marginLeft: "10px",
+                      }}
+                    >
+                      {e.referral}
+                    </span>
                   </div>
                 </div>
               );

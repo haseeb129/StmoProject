@@ -25,7 +25,7 @@ class ListOfPrizes extends Component {
   render() {
     return (
       <div>
-        <div className="homePageOverflow">
+        <div className="">
           {!this.state.user && (
             <h3 style={{ fontWeight: "bolder" }}>Loading....</h3>
           )}

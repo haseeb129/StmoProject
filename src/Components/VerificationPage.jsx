@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Row, Col, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import ReactPlayer from "react-player";
 import auth from "./Auth/authService";
 

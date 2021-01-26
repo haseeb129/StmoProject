@@ -1,13 +1,7 @@
 import React, { Component } from "react";
 import "./auth.css";
-import axios from "axios";
-import auth from "./authService";
-import { Alert, Button, Form } from "react-bootstrap/";
+import { Button } from "react-bootstrap/";
 export default class ExistingSubscriberOptions extends Component {
-  componentDidMount() {
-    console.log("ExistingSubscriberOptions", this.props);
-  }
-
   render() {
     return (
       <div>

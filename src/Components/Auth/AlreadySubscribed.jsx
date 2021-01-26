@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./auth.css";
 import axios from "axios";
 import auth from "./authService";
-import { Alert, Button, Form } from "react-bootstrap/";
+import { Button, Form } from "react-bootstrap/";
 export default class AlreadySubscribed extends Component {
   state = {
     // referralCode: "e01f8968-5ad7-4b4b-ada3-2761359dd2c2",
