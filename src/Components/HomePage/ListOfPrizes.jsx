@@ -26,7 +26,7 @@ class ListOfPrizes extends Component {
     return (
       <div>
         <div className="">
-          {!this.state.user && (
+          {!this.state.user.length === 0 && (
             <h3 style={{ fontWeight: "bolder" }}>Loading....</h3>
           )}
           {this.state.user &&
@@ -55,7 +55,7 @@ class ListOfPrizes extends Component {
                     style={{
                       paddingLeft: "2%",
                       fontSize: "20px",
-                      marginTop: "5px",
+                      marginTop: "8px",
                       marginBottom: "2%",
                     }}
                   >

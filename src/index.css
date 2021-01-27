@@ -1,18 +1,29 @@
-/* @font-face {
+@font-face {
   font-family: "Helomade-Regular";
   src: local("Helomade-Regular"),
     url("./fonts/Helomade-Regular.ttf") format("truetype");
   font-weight: normal;
-} */
-
+}
 @font-face {
   font-family: "TrashHand";
   src: local("TrashHand"), url("./fonts/TrashHand.ttf") format("truetype");
   font-weight: normal;
 }
+@font-face {
+  font-family: "AcademyFilled3D";
+  src: local("AcademyFilled3D"),
+    url("./fonts/AcademyFilled3D.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Academy";
+  src: local("Academy"), url("./fonts/Academy.ttf") format("truetype");
+  font-weight: normal;
+}
+
 body {
   margin: 0;
-  font-family: "TrashHand";
+  font-family: "Academy";
   font-weight: bold;
   /* font-family: "Helomade-Regular"; */
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -45,13 +56,13 @@ code {
   margin: 0%;
 }
 h4 {
-  font-family: TrashHand;
+  font-family: Academy;
   /* font-family: Helomade-Regular; */
 
   text-decoration: underline;
 }
 .appClass {
-  font-family: TrashHand;
+  font-family: Academy;
   font-weight: bold;
 
   /* font-family: Helomade-Regular; */

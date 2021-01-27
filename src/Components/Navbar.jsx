@@ -117,9 +117,10 @@ export default class SampleNavbar extends Component {
                     onClick={this.handleLogout}
                     style={{
                       marginRight: "1rem",
+                      fontWeight: "bold",
                     }}
                   >
-                    SignOut
+                    Log Out
                   </Button>
                 )}
               </Navbar.Collapse>

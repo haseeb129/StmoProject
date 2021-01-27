@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import { Table, Row, Col } from "react-bootstrap";
 import axios from "axios";
 class Leaderboard extends Component {
-  state = {};
+  state = { leaderboardList: [] };
   compare = (a, b) => {
     if (a.position < b.position) {
       return -1;
@@ -15,7 +15,7 @@ class Leaderboard extends Component {
 
   componentDidMount() {
     axios
-      .get("http://projectstomsapi.com/leader-board")
+      .get("https://projectstomsapi.com/leader-board")
       .then((res) => {
         try {
           console.log(
@@ -35,7 +35,7 @@ class Leaderboard extends Component {
   render() {
     return (
       <div>
-        {!this.state.leaderboardList && (
+        {this.state.leaderboardList.length === 0 && (
           <h3 style={{ fontWeight: "bolder" }}>Loading....</h3>
         )}
         {this.state.leaderboardList && (

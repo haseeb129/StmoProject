@@ -109,8 +109,8 @@ class HomePage extends Component {
                   textAlign: "center",
                   backgroundColor: "yellow",
                   paddingTop: "10px",
-                  marginLeft: "20%",
-                  marginRight: "20%",
+                  paddingLeft: "15%",
+                  paddingRight: "15%",
                 }}
               >
                 <YoutubeSubscribe

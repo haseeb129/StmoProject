@@ -39,11 +39,7 @@ export default class SignUp extends Component {
       "Content-Type": "application/json",
     };
     await axios
-      .post(
-        "http://stombackendapi-env.eba-pqvtsdnw.us-east-2.elasticbeanstalk.com/email",
-        sendingObject,
-        header
-      )
+      .post("https://projectstomsapi.com/email", sendingObject, header)
       .then(async (response) => {
         alert("subscribed successfully");
         auth.addUser(response.data.data.body);

@@ -5,6 +5,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./fonts/Helomade-Regular.ttf";
 import "./fonts/TrashHand.ttf";
+import "./fonts/AcademyFilled3D.ttf";
+import "./fonts/Academy.ttf";
 
 ReactDOM.render(
   <React.StrictMode>
