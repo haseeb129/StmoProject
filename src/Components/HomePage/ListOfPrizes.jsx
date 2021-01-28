@@ -35,7 +35,9 @@ class ListOfPrizes extends Component {
                 <div key={idx}>
                   <Row>
                     <Col md={2} sm={2} xs={2}>
-                      <div className="circularShape">{e.points}</div>
+                      <div className="circularShape">
+                        <div className="centerPoints">{e.points}</div>
+                      </div>
                     </Col>
                     <Col md={10} sm={10} xs={10}>
                       <div

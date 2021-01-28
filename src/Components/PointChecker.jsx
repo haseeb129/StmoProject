@@ -4,14 +4,14 @@ class PointChecker extends Component {
   state = { user: auth.getUser() };
   render() {
     return (
-      <div>
+      <div className="wordWrap">
         <div
           className="blueBackground "
           style={{ padding: "20px", minHeight: "100vh" }}
         >
           <div style={{ textAlign: "center" }}>
             <div style={{ textAlign: "center", marginTop: "15%" }}>
-              <p style={{ fontSize: "90px", fontWeight: "bold" }}>
+              <p style={{ fontSize: "11vh", fontWeight: "bold" }}>
                 Your Points:
                 <span
                   style={{

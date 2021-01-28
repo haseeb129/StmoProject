@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "./Components/HomePage/HomePage";
 import VerificationPage from "./Components/VerificationPage";
 import PointChecker from "./Components/PointChecker";
-
+import EmailConfirmation from "./Components/Auth/EmailConfirmation";
 import AlreadySubscribed from "./Components/Auth/AlreadySubscribed";
 import SubscriptionAsking from "./Components/Auth/SubscriptionAsking";
 import auth from "./Components/Auth/authService";
@@ -33,6 +33,11 @@ class App extends Component {
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/test" component={SubscriptionAsking} />
 
+                <Route
+                  exact
+                  path="/EmailConfirmation/:token"
+                  component={EmailConfirmation}
+                />
                 <Route
                   exact
                   path="/VerificationPage"

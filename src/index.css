@@ -116,16 +116,19 @@ h4 {
   height: 60px;
   width: 60px;
   border: 2px solid;
-  /* box-shadow: 3px 8px; */
-
   border-color: black;
   box-shadow: 5px 10px black;
-
-  text-align: center;
-  /* padding-top: 10%; */
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
-  padding-bottom: 15%;
+  position: relative;
+}
+.centerPoints {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .divClass {
@@ -254,4 +257,8 @@ span {
   /* box-shadow: violet; */
   border-radius: 50px 2px;
   box-shadow: 10px 10px 5px grey;
+}
+
+.wordWrap {
+  word-wrap: break-word;
 }

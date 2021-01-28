@@ -25,7 +25,11 @@ class HomePage extends Component {
     return (
       <div>
         <Container fluid>
-          <Row className="blueBackground " style={{ padding: "20px" }}>
+          <Row
+            className="blueBackground "
+            style={{ paddingLeft: "20px", paddingRight: "20px" }}
+          >
+            {/* paddingLeft: "20px", paddingRight: "20px" */}
             <Col>
               {/* <FadeInAnimation direction="down" delay={0}>
                 
@@ -35,9 +39,16 @@ class HomePage extends Component {
                   textAlign: "center",
                   fontSize: "60px",
                   fontWeight: "bolder",
+                  margin: "0px",
                 }}
               >
-                <p>Steve To One Million</p>
+                <p
+                  style={{
+                    margin: "0px",
+                  }}
+                >
+                  Steve To One Million
+                </p>
               </div>
               {/* <div
           className="g-ytsubscribe"
@@ -55,14 +66,14 @@ class HomePage extends Component {
         </div> */}
 
               {this.state.user && (
-                <Row>
-                  <Col md={4} sm={12}>
+                <Row className="mb-0">
+                  <Col md={4} sm={12} className="mb-0">
                     {this.state.newSubscriber === null && (
                       <ExistingSubscriberOptions {...this.props} />
                     )}
                     <br />
                   </Col>
-                  <Col md={8} sm={12}>
+                  <Col md={8} sm={12} className="mb-0">
                     <ReactPlayer
                       width="100%"
                       controls={true}
@@ -121,9 +132,6 @@ class HomePage extends Component {
                   count={"default"}
                 />
               </div>
-
-              <br />
-              <br />
             </Col>
           </Row>
         </Container>
