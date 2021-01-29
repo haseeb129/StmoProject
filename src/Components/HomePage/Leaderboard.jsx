@@ -39,10 +39,10 @@ class Leaderboard extends Component {
           <h3 style={{ fontWeight: "bolder" }}>Loading....</h3>
         )}
         {this.state.leaderboardList && (
-          <div className="">
+          <div className="pr-2">
             {this.state.leaderboardList.map((e, idx) => {
               return (
-                <div key={idx} className="squareShape ml-4 mr-4 mb-4 mt-0">
+                <div key={idx} className="squareShape ml-4 mr-4 mb-5 mt-0 ">
                   Emial:
                   <span
                     style={{

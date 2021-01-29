@@ -11,6 +11,7 @@ import EmailConfirmation from "./Components/Auth/EmailConfirmation";
 import AlreadySubscribed from "./Components/Auth/AlreadySubscribed";
 import SubscriptionAsking from "./Components/Auth/SubscriptionAsking";
 import auth from "./Components/Auth/authService";
+import Test from "./Components/Test";
 class App extends Component {
   state = { user: auth.getUser() };
 
@@ -31,7 +32,7 @@ class App extends Component {
                 /> */}
 
                 <Route exact path="/" component={HomePage} />
-                <Route exact path="/test" component={SubscriptionAsking} />
+                <Route exact path="/test" component={Test} />
 
                 <Route
                   exact

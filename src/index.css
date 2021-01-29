@@ -20,7 +20,6 @@
   src: local("Academy"), url("./fonts/Academy.ttf") format("truetype");
   font-weight: normal;
 }
-
 body {
   margin: 0;
   font-family: "Academy";
@@ -225,6 +224,7 @@ h4 {
   text-align: center;
   /* padding-top: 10%; */
   font-size: 22px;
+  padding-right: 1%;
   font-weight: bold;
   /* padding-bottom: 15%; */
   word-wrap: break-word;
@@ -262,3 +262,36 @@ span {
 .wordWrap {
   word-wrap: break-word;
 }
+
+/* .circularShapeNew {
+  border-radius: 50%;
+  background-image: linear-gradient(
+    45deg,
+    #ff9a9e 0%,
+    #fad0c4 99%,
+    #fad0c4 100%
+  );
+  position: absolute;
+  border: 2px solid;
+  border-color: black;
+  box-shadow: 5px 10px black;
+  font-size: 25px;
+  font-weight: bold;
+  min-width: 100px;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+} */
+/* .circularShapeOutside {
+  position: relative;
+  min-height: 15vh;
+  background-color: yellow;
+}
+
+.circularShapeInsideWord {
+  position: relative;
+  padding-left: 35%;
+  padding-right: 50%;
+
+} */

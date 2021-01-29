@@ -32,7 +32,7 @@ class ListOfPrizes extends Component {
           {this.state.user &&
             this.state.user.map((e, idx) => {
               return (
-                <div key={idx}>
+                <div key={idx} className="mb-5">
                   <Row>
                     <Col md={2} sm={2} xs={2}>
                       <div className="circularShape">
@@ -43,7 +43,7 @@ class ListOfPrizes extends Component {
                       <div
                         style={{
                           fontSize: "25px",
-                          fontWeight: "bold",
+                          fontWeight: "bolder",
                           paddingLeft: "10px",
                           paddingTop: "10px",
                         }}
@@ -57,7 +57,7 @@ class ListOfPrizes extends Component {
                     style={{
                       paddingLeft: "2%",
                       fontSize: "20px",
-                      marginTop: "8px",
+                      marginTop: "20px",
                       marginBottom: "2%",
                     }}
                   >

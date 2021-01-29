@@ -25,11 +25,7 @@ class HomePage extends Component {
     return (
       <div>
         <Container fluid>
-          <Row
-            className="blueBackground "
-            style={{ paddingLeft: "20px", paddingRight: "20px" }}
-          >
-            {/* paddingLeft: "20px", paddingRight: "20px" */}
+          <Row className="blueBackground " style={{ padding: "20px" }}>
             <Col>
               {/* <FadeInAnimation direction="down" delay={0}>
                 
@@ -39,46 +35,43 @@ class HomePage extends Component {
                   textAlign: "center",
                   fontSize: "60px",
                   fontWeight: "bolder",
-                  margin: "0px",
+                  marginTop: "2%",
+                  marginBottom: "4%",
                 }}
               >
-                <p
-                  style={{
-                    margin: "0px",
-                  }}
-                >
-                  Steve To One Million
-                </p>
+                <p>Steve To One Million</p>
               </div>
               {/* <div
-          className="g-ytsubscribe"
-          data-channelid="UCJv5T2W-D3K3fYO0prgv5uw"
-          data-layout="full"
-          data-count="default"
-        >
-          <Button
-            onClick={(e) => {
-              console.log("AS", e);
-            }}
-          >
-            hghg
-          </Button>
-        </div> */}
+              className="g-ytsubscribe"
+              data-channelid="UCJv5T2W-D3K3fYO0prgv5uw"
+              data-layout="full"
+              data-count="default"
+              >
+            <Button
+              onClick={(e) => {
+                console.log("AS", e);
+              }}
+            >
+              hghg
+            </Button>
+              </div> */}
 
               {this.state.user && (
-                <Row className="mb-0">
-                  <Col md={4} sm={12} className="mb-0">
+                <Row>
+                  <Col md={4} sm={12}>
                     {this.state.newSubscriber === null && (
                       <ExistingSubscriberOptions {...this.props} />
                     )}
                     <br />
                   </Col>
-                  <Col md={8} sm={12} className="mb-0">
-                    <ReactPlayer
-                      width="100%"
-                      controls={true}
-                      url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-                    />
+                  <Col md={8} sm={12}>
+                    <div className="pl-2 pr-2">
+                      <ReactPlayer
+                        width="100%"
+                        controls={true}
+                        url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+                      />
+                    </div>
                   </Col>
                 </Row>
               )}
@@ -91,29 +84,31 @@ class HomePage extends Component {
                         onMouseClick={this.setNewSubscriber}
                       />
                     )}
-                    {/* <FadeInAnimation direction="down" delay={0}>
-                      
-                    </FadeInAnimation> */}
                     {this.state.newSubscriber === true && <SignIn />}
 
                     {this.state.newSubscriber === false && (
-                      // <ExistingSubscriberOptions />
                       <ExistingSubscriber />
                     )}
 
                     <br />
                   </Col>
                   <Col md={8} sm={12}>
-                    <ReactPlayer
-                      width="100%"
-                      controls={true}
-                      url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-                    />
+                    <div className="pl-2 pr-2">
+                      <ReactPlayer
+                        width="100%"
+                        controls={true}
+                        url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+                      />
+                    </div>
                   </Col>
                 </Row>
               )}
-
-              <br />
+              <div>
+                <br />
+                <br />
+                <br />
+                <br />
+              </div>
               <div
                 className="youtubeBackground"
                 style={{
@@ -132,6 +127,14 @@ class HomePage extends Component {
                   count={"default"}
                 />
               </div>
+              <div>
+                <br />
+                <br />
+                <br />
+                <br />
+              </div>
+              <br />
+              <br />
             </Col>
           </Row>
         </Container>
